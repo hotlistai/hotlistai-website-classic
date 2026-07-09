@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
-import { CalBookingButton } from "@/components/cal-booking-button"
+
 
 const productLinks = [
   { name: "The Lab", href: "/lab", description: "AI software products" },
@@ -151,9 +151,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <CalBookingButton size="sm" className="hidden md:inline-flex">
-            Book a session
-          </CalBookingButton>
+          <Link
+            href="/contact"
+            className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-full bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors"
+          >
+            Contact
+          </Link>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -237,11 +240,13 @@ export function SiteHeader() {
               Contact
             </Link>
 
-            <div className="mt-3 px-4" onClick={() => setIsOpen(false)}>
-              <CalBookingButton size="sm" className="w-full">
-                Book a session
-              </CalBookingButton>
-            </div>
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="mt-3 mx-4 block text-center px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-medium hover:bg-foreground/90 transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
         </div>
       )}

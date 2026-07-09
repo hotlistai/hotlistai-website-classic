@@ -1,15 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, CheckCircle2, Shield } from "lucide-react"
-import { CalBookingButton } from "@/components/cal-booking-button"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { caseStudies } from "@/lib/hire-content"
+import { caseStudies } from "@/lib/lab-content"
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Production AI systems built by Johnny Apple — Estate Mogul OS, Knox Client Portal, HotlistVerify, and self-hosted agent infrastructure.",
+    "Production AI systems from Hotlist AI — Estate Mogul OS, Knox Client Portal, HotlistVerify, and self-hosted agent infrastructure.",
   alternates: { canonical: "/work" },
 }
 
@@ -99,18 +98,25 @@ export default function WorkPage() {
 
         <section className="py-20 px-4 md:px-6 border-t border-border/40 bg-muted/10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Need something similar built?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-4">Interested in a similar system?</h2>
             <p className="text-muted-foreground mb-8">
-              Private demos and architecture walkthroughs available on a build review call.
+              Reach out about partnerships, or visit johnny-apple.com for custom builds and fractional work.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <CalBookingButton size="lg">Book a build session</CalBookingButton>
               <Link
                 href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity"
+              >
+                Contact Hotlist AI <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a
+                href="https://johnny-apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-border/50 text-sm font-medium hover:border-foreground/40 transition-colors"
               >
-                Send a message <ArrowRight className="h-4 w-4" />
-              </Link>
+                Work with Johnny Apple <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>

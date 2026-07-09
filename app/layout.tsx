@@ -16,11 +16,11 @@ const _instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "Johnny Apple | Production AI Systems Builder — Hotlist AI",
+    default: "Hotlist AI | The AI Operating System for Digital Counterparts",
     template: "%s | Hotlist AI",
   },
   description:
-    "Johnny Apple builds production agent systems, client portals, and AI infrastructure. Case studies, capabilities, and The Lab at Hotlist AI.",
+    "Hotlist AI is a product lab building production agent systems, digital counterparts, and operator-grade infrastructure. Explore The Lab, work, and capabilities.",
   keywords: [
     // Core AI terms
     "AI",
@@ -117,23 +117,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hotlistai.com",
     siteName: "Hotlist AI",
-    title: "Johnny Apple | Production AI Systems Builder — Hotlist AI",
+    title: "Hotlist AI | The AI Operating System for Digital Counterparts",
     description:
-      "Hire a builder who ships agent loops, guardrails, client portals, and VPS-backed AI infrastructure — not demos.",
+      "Production agent systems, digital counterparts, and operator-grade infrastructure — built in The Lab at Hotlist AI.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Johnny Apple — Production AI Systems Builder at Hotlist AI",
+        alt: "Hotlist AI — The AI Operating System for Digital Counterparts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Johnny Apple | Production AI Systems Builder — Hotlist AI",
+    title: "Hotlist AI | The AI Operating System for Digital Counterparts",
     description:
-      "Hire a builder who ships agent loops, guardrails, client portals, and VPS-backed AI infrastructure — not demos.",
+      "Production agent systems, digital counterparts, and operator-grade infrastructure — built in The Lab at Hotlist AI.",
     images: ["/og-image.jpg"],
     creator: "@hotlistai",
     site: "@hotlistai",
@@ -221,7 +221,7 @@ const jsonLd = {
       founder: {
         "@type": "Person",
         name: "Johnny Apple",
-        url: "https://hotlistai.substack.com",
+        url: "https://johnny-apple.com",
         sameAs: ["https://twitter.com/johnnyapple", "https://linkedin.com/in/johnnyapple"],
       },
       contactPoint: [

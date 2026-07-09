@@ -1,15 +1,7 @@
-export const founder = {
+export const companyFounder = {
   name: "Johnny Apple",
-  title: "Production AI Systems Builder",
-  location: "Frisco, Texas",
-  tagline: "I ship agentic systems operators can trust — not demos that die in week three.",
-  bio: "I build multi-agent workflows, workspace automation, client portals, and VPS-backed AI runtimes. AI writes useful first drafts. I turn them into tested, guarded, production-safe systems.",
-  links: {
-    email: "info@hotlistai.com",
-    github: "https://github.com/hotlistai",
-    substack: "https://hotlistai.substack.com",
-    linkedin: "https://linkedin.com/company/hotlistai",
-  },
+  title: "Founder",
+  url: "https://johnny-apple.com",
 }
 
 export const proofStats = [
@@ -219,23 +211,5 @@ export const capabilities: Capability[] = [
     title: "Human handoff design",
     description: "Automation for busy work, explicit moments where a person must step in.",
     proof: "Preview-confirm queues and connector honesty messaging",
-  },
-]
-
-export const engagementSteps = [
-  {
-    step: "01",
-    title: "Build review",
-    description: "30-minute call to map your workflow, failure modes, and what production actually requires.",
-  },
-  {
-    step: "02",
-    title: "Pilot scope",
-    description: "One bounded agent lane or integration — designed to ship in 1–2 weeks with eval and guardrails.",
-  },
-  {
-    step: "03",
-    title: "Operate & harden",
-    description: "Deploy, test, fix root causes, and document what the system can and cannot do honestly.",
   },
 ]

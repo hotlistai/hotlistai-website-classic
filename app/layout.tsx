@@ -16,11 +16,11 @@ const _instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hotlist AI | AI-Powered Digital Counterparts & Lead Generation Systems",
+    default: "Hotlist AI | AI Lab for Agentic Systems & Digital Counterparts",
     template: "%s | Hotlist AI",
   },
   description:
-    "Hotlist AI builds AI-powered digital counterparts, intelligent automation systems, and high-converting lead generation funnels for real estate, solar, legal, and service businesses. Software products and custom AI solutions starting at $2,500.",
+    "Hotlist AI is an AI product lab building agentic workflow systems and digital counterparts. Explore The Lab for Estate Mogul, LyftEmail, PRIME, and more. Real estate follow-up services at hotlistengine.com.",
   keywords: [
     // Core AI terms
     "AI",

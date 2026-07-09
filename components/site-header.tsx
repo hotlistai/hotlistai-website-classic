@@ -4,6 +4,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+import { EngineBanner } from "@/components/engine-banner"
+import { HOTLIST_ENGINE_URL } from "@/lib/site-links"
 
 const productLinks = [
   { name: "The Lab", href: "/lab", description: "AI software products" },
@@ -82,6 +84,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/90">
+      <EngineBanner />
       <div className="max-w-7xl mx-auto flex h-14 items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
           <Image
@@ -129,14 +132,20 @@ export function SiteHeader() {
           >
             Blog
           </Link>
+          <a
+            href={HOTLIST_ENGINE_URL}
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Services
+          </a>
         </nav>
 
         <div className="flex items-center gap-3">
           <Link
-            href="/contact"
+            href="/lab"
             className="hidden md:inline-flex px-5 py-2 text-sm font-semibold rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
           >
-            Get in Touch
+            Explore The Lab
           </Link>
 
           <button
@@ -199,12 +208,20 @@ export function SiteHeader() {
               Blog
             </Link>
 
+            <a
+              href={HOTLIST_ENGINE_URL}
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
+            >
+              Services (hotlistengine.com)
+            </a>
+
             <Link
-              href="/contact"
+              href="/lab"
               onClick={() => setIsOpen(false)}
               className="block mt-3 px-4 py-2.5 text-sm font-semibold text-center rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
             >
-              Get in Touch
+              Explore The Lab
             </Link>
           </nav>
         </div>

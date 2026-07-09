@@ -31,7 +31,12 @@ const faqs = [
       {
         question: "What is a digital counterpart?",
         answer:
-          "A digital counterpart is an AI-powered agent that acts as an intelligent extension of you or your business. Unlike traditional tools that require constant input, digital counterparts understand context, make decisions, and handle complex workflows autonomously. They're built to think, act, and operate like a specialized team member.",
+          "A digital counterpart is an AI agent that owns a job — not just answers prompts. It understands context, makes decisions within boundaries, and handles workflows autonomously, more like a specialized teammate than a chatbot.",
+      },
+      {
+        question: "What is the difference between hotlistai.com and hotlistengine.com?",
+        answer:
+          "hotlistai.com is our AI lab — products, experiments, and the systems we are building in public. hotlistengine.com is where we serve real estate teams: Lead Follow-Up Audits, CRM fixes, and ongoing Agent Tech Concierge support.",
       },
       {
         question: "How is Hotlist AI different from other AI companies?",

@@ -4,11 +4,12 @@ Restored from `v0-hotlistai-website-build` commit `947a593` (2026-02-07).
 
 ## What this version is
 
-- **Positioning:** AI venture studio — "The AI Operating System for Digital Counterparts"
-- **Hero CTAs:** Explore The Lab, View Hotlist Funnels
-- **Products:** Estate Mogul, LyftEmail, PRIME
-- **Nav:** The Lab, Hotlist Funnels, Ethos, Company (dropdown), Blog, Contact
-- **Domain:** `hotlistai.com` (separate from `hotlistengine.com`)
+- **Positioning:** AI product lab — agentic systems and digital counterparts (2026 refresh)
+- **Hero CTAs:** Explore The Lab, Who we are
+- **Bridge:** Banner + two-door section pointing services to `hotlistengine.com`
+- **Products:** Estate Mogul (Active), LyftEmail (In Development), PRIME (Beta)
+- **Nav:** Ethos, Products, Company, Blog, Services → hotlistengine.com
+- **Domain:** `hotlistai.com` (lab) separate from `hotlistengine.com` (concierge)
 
 ## What changed after this commit (not included here)
 

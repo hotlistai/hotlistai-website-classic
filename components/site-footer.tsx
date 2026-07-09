@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { HOTLIST_ENGINE_URL } from "@/lib/site-links"
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/hotlistai", icon: GithubIcon },
@@ -56,6 +57,10 @@ const footerLinks = {
     { name: "The Lab", href: "/lab" },
     { name: "Hotlist Funnels", href: "/hotlist-funnels" },
   ],
+  services: [
+    { name: "Agent Tech Concierge", href: HOTLIST_ENGINE_URL, external: true },
+    { name: "Lead Follow-Up Audit", href: `${HOTLIST_ENGINE_URL}/follow-up-leak-audit`, external: true },
+  ],
   company: [
     { name: "Ethos", href: "/ethos" },
     { name: "Who We Are", href: "/company" },
@@ -76,7 +81,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/40 bg-muted/20">
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
@@ -89,7 +94,13 @@ export function SiteFooter() {
                 className="h-6 w-auto hidden dark:block"
               />
             </Link>
-            <p className="text-sm text-muted-foreground mb-6">Where people and products meet.</p>
+            <p className="text-sm text-muted-foreground mb-6">
+              AI lab and product studio. Services for real estate teams live at{" "}
+              <a href={HOTLIST_ENGINE_URL} className="text-foreground hover:opacity-80 underline underline-offset-4">
+                hotlistengine.com
+              </a>
+              .
+            </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -118,6 +129,38 @@ export function SiteFooter() {
                   >
                     {link.name}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="font-medium text-sm mb-4">Services</h3>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-flex items-center gap-1 group"
+                  >
+                    {link.name}
+                    <svg
+                      className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -176,8 +219,8 @@ export function SiteFooter() {
 
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Hotlist AI. All rights reserved.</p>
-          <p>Where people and products meet.</p>
+          <p>© 2026 Hotlist AI. All rights reserved.</p>
+          <p>Lab at hotlistai.com · Services at hotlistengine.com</p>
         </div>
       </div>
     </footer>

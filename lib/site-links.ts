@@ -1,0 +1,1 @@
+export const HOTLIST_ENGINE_URL = "https://www.hotlistengine.com"

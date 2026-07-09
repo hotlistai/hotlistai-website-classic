@@ -5,12 +5,6 @@ import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 
-
-const productLinks = [
-  { name: "The Lab", href: "/lab", description: "AI software products" },
-  { name: "Hotlist Funnels", href: "/hotlist-funnels", description: "High-velocity conversion systems" },
-]
-
 const companyLinks = [
   { name: "Who We Are", href: "/company" },
   { name: "The Foundry", href: "/company#foundry" },
@@ -123,13 +117,6 @@ export function SiteHeader() {
             Ethos
           </Link>
           <Dropdown
-            label="Products"
-            items={productLinks}
-            open={openDropdown === "products"}
-            onToggle={() => setOpenDropdown(openDropdown === "products" ? null : "products")}
-            onClose={() => setOpenDropdown(null)}
-          />
-          <Dropdown
             label="Company"
             items={companyLinks}
             open={openDropdown === "company"}
@@ -194,23 +181,6 @@ export function SiteHeader() {
             </Link>
 
             <div className="px-4 pt-4 pb-1">
-              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Products</span>
-            </div>
-            {productLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2.5 pl-6 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
-              >
-                {item.name}
-                {item.description && (
-                  <span className="block text-xs text-muted-foreground mt-0.5">{item.description}</span>
-                )}
-              </Link>
-            ))}
-
-            <div className="px-4 pt-4 pb-1">
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Company</span>
             </div>
             {companyLinks.map((item) => (
@@ -230,14 +200,6 @@ export function SiteHeader() {
               className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
             >
               Blog
-            </Link>
-
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
-            >
-              Contact
             </Link>
 
             <Link

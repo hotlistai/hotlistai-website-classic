@@ -55,10 +55,7 @@ const footerLinks = {
   proof: [
     { name: "Work", href: "/work" },
     { name: "Capabilities", href: "/capabilities" },
-  ],
-  products: [
     { name: "The Lab", href: "/lab" },
-    { name: "Hotlist Funnels", href: "/hotlist-funnels" },
   ],
   company: [
     { name: "Ethos", href: "/ethos" },
@@ -80,7 +77,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/40 bg-muted/20">
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
@@ -128,23 +125,6 @@ export function SiteFooter() {
             <h3 className="font-medium text-sm mb-4">Proof</h3>
             <ul className="space-y-3">
               {footerLinks.proof.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-block"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Products */}
-          <div>
-            <h3 className="font-medium text-sm mb-4">Products</h3>
-            <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

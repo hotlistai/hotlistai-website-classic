@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
-import { GoogleMarketingTags } from "@/components/google-marketing-tags"
+import { GoogleTagManagerBody, GoogleTagManagerHead } from "@/components/google-tag-manager"
 import { SITE_URL } from "@/lib/site"
 import "./globals.css"
 
@@ -348,7 +348,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <GoogleMarketingTags />
+        <GoogleTagManagerHead />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Script
           id="hs-script-loader"
@@ -359,6 +359,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans antialiased ${_instrumentSerif.variable}`}>
+        <GoogleTagManagerBody />
         {children}
         <ChatWidget />
         <Analytics />

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Hotlist AI",
   },
   description:
-    "Hotlist AI is an AI product lab building agentic workflow systems and digital counterparts. Explore The Lab for Estate Mogul, LyftEmail, PRIME, and more. Real estate follow-up services at hotlistengine.com.",
+    "Hotlist AI is an AI product lab building agentic workflow systems and digital counterparts. Explore The Lab for Estate Mogul, LyftEmail, PRIME, and more.",
   keywords: [
     // Core AI terms
     "AI",

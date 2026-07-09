@@ -4,7 +4,6 @@ import { SiteFooter } from "@/components/site-footer"
 import { ArrowRight, Building, Mail, Zap } from "lucide-react"
 import Link from "next/link"
 import { useScrollAnimations } from "@/lib/scroll-animations"
-import { HOTLIST_ENGINE_URL } from "@/lib/site-links"
 
 const featuredProducts = [
   {
@@ -46,10 +45,10 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-foreground selection:text-background overflow-x-hidden">
       <SiteHeader />
 
-      <main className="flex-1 pt-[5.75rem]">
+      <main className="flex-1">
         <article>
           <section
-            className="relative min-h-[85vh] flex items-center justify-center px-4 md:px-6"
+            className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6"
             aria-labelledby="hero-heading"
           >
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -93,47 +92,6 @@ export default function Home() {
                   Who we are
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </div>
-
-              <p className="text-sm text-muted-foreground animate-fade-in-up delay-300">
-                Need CRM follow-up help for a real estate team?{" "}
-                <a href={HOTLIST_ENGINE_URL} className="text-foreground underline underline-offset-4 hover:opacity-80">
-                  hotlistengine.com
-                </a>
-              </p>
-            </div>
-          </section>
-
-          <section className="py-16 border-t border-border/40 bg-muted/10" aria-labelledby="two-doors-heading">
-            <div className="max-w-5xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-6 scroll-animate">
-              <div className="rounded-2xl border border-border/40 bg-background p-8">
-                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3">hotlistai.com</p>
-                <h2 id="two-doors-heading" className="font-serif text-2xl md:text-3xl mb-3">
-                  The Lab
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Products, experiments, and the digital counterpart ideas we are building next. For founders,
-                  builders, and partners.
-                </p>
-                <Link
-                  href="/lab"
-                  className="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all"
-                >
-                  See what we are building <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              <div className="rounded-2xl border border-foreground/15 bg-foreground text-background p-8">
-                <p className="text-xs font-mono uppercase tracking-wider text-background/60 mb-3">hotlistengine.com</p>
-                <h2 className="font-serif text-2xl md:text-3xl mb-3">Agent Tech Concierge</h2>
-                <p className="text-background/75 leading-relaxed mb-6">
-                  Lead follow-up audits, CRM fixes, and ongoing tech management for 5–25 agent real estate teams.
-                </p>
-                <a
-                  href={HOTLIST_ENGINE_URL}
-                  className="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all"
-                >
-                  Book a follow-up audit <ArrowRight className="w-4 h-4" />
-                </a>
               </div>
             </div>
           </section>

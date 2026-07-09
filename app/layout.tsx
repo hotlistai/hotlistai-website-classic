@@ -2,9 +2,19 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
+import { GoogleMarketingTags } from "@/components/google-marketing-tags"
+import { SITE_URL } from "@/lib/site"
 import "./globals.css"
+
+const rawGoogleSiteVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION
+const googleSiteVerification =
+  rawGoogleSiteVerification && !rawGoogleSiteVerification.includes("<")
+    ? rawGoogleSiteVerification
+    : undefined
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -108,21 +118,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://hotlistai.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hotlistai.com",
+    url: SITE_URL,
     siteName: "Hotlist AI",
     title: "Hotlist AI | The AI Operating System for Digital Counterparts",
     description:
       "Production agent systems, digital counterparts, and operator-grade infrastructure — built in The Lab at Hotlist AI.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Hotlist AI — The AI Operating System for Digital Counterparts",
@@ -134,7 +144,7 @@ export const metadata: Metadata = {
     title: "Hotlist AI | The AI Operating System for Digital Counterparts",
     description:
       "Production agent systems, digital counterparts, and operator-grade infrastructure — built in The Lab at Hotlist AI.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: "@hotlistai",
     site: "@hotlistai",
   },
@@ -159,9 +169,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Add your verification codes here when you have them
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
+    ...(googleSiteVerification ? { google: googleSiteVerification } : {}),
   },
   category: "technology",
   generator: "v0.app",
@@ -188,7 +196,7 @@ const jsonLd = {
       alternateName: ["HotlistAI", "Hotlist Labs"],
       description:
         "AI venture studio building digital counterparts and lead generation systems. We create specialized intelligence systems that provide clarity, speed, and real leverage for founders and businesses.",
-      url: "https://hotlistai.com",
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
         url: "https://hotlistai.com/logo-light.png",
@@ -250,7 +258,7 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "@id": "https://hotlistai.com/#website",
-      url: "https://hotlistai.com",
+      url: SITE_URL,
       name: "Hotlist AI",
       description: "AI-powered digital counterparts and lead generation systems",
       publisher: {
@@ -340,6 +348,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <GoogleMarketingTags />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Script
           id="hs-script-loader"
@@ -353,6 +362,7 @@ export default function RootLayout({
         {children}
         <ChatWidget />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+import { CalBookingButton } from "@/components/cal-booking-button"
 
 const productLinks = [
   { name: "The Lab", href: "/lab", description: "AI software products" },
@@ -102,7 +103,19 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2">
+          <Link
+            href="/work"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Work
+          </Link>
+          <Link
+            href="/capabilities"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Capabilities
+          </Link>
           <Link
             href="/ethos"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -138,12 +151,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/lab"
-            className="hidden md:inline-flex px-5 py-2 text-sm font-semibold rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
-          >
-            Explore The Lab
-          </Link>
+          <CalBookingButton size="sm" className="hidden md:inline-flex">
+            Book a session
+          </CalBookingButton>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -158,6 +168,20 @@ export function SiteHeader() {
       {isOpen && (
         <div className="md:hidden border-t border-border/20 bg-background/98 backdrop-blur-md animate-fade-in">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+            <Link
+              href="/work"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
+            >
+              Work
+            </Link>
+            <Link
+              href="/capabilities"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
+            >
+              Capabilities
+            </Link>
             <Link
               href="/ethos"
               onClick={() => setIsOpen(false)}
@@ -213,13 +237,11 @@ export function SiteHeader() {
               Contact
             </Link>
 
-            <Link
-              href="/lab"
-              onClick={() => setIsOpen(false)}
-              className="block mt-3 px-4 py-2.5 text-sm font-semibold text-center rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
-            >
-              Explore The Lab
-            </Link>
+            <div className="mt-3 px-4" onClick={() => setIsOpen(false)}>
+              <CalBookingButton size="sm" className="w-full">
+                Book a session
+              </CalBookingButton>
+            </div>
           </nav>
         </div>
       )}

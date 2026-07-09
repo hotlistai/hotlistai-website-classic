@@ -52,6 +52,11 @@ function SubstackIcon({ className }: { className?: string }) {
 }
 
 const footerLinks = {
+  hire: [
+    { name: "Work", href: "/work" },
+    { name: "Capabilities", href: "/capabilities" },
+    { name: "Contact", href: "/contact" },
+  ],
   products: [
     { name: "The Lab", href: "/lab" },
     { name: "Hotlist Funnels", href: "/hotlist-funnels" },
@@ -76,7 +81,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/40 bg-muted/20">
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
@@ -90,7 +95,8 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
-              AI lab and product studio building agentic systems and digital counterparts.
+              Johnny Apple builds production agent systems, client portals, and AI infrastructure. Hotlist AI is the lab
+              behind the work.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -106,6 +112,23 @@ export function SiteFooter() {
                 </a>
               ))}
             </div>
+          </div>
+
+          {/* Hire */}
+          <div>
+            <h3 className="font-medium text-sm mb-4">Hire</h3>
+            <ul className="space-y-3">
+              {footerLinks.hire.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Products */}

@@ -16,11 +16,11 @@ const _instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hotlist AI | AI Lab for Agentic Systems & Digital Counterparts",
+    default: "Johnny Apple | Production AI Systems Builder — Hotlist AI",
     template: "%s | Hotlist AI",
   },
   description:
-    "Hotlist AI is an AI product lab building agentic workflow systems and digital counterparts. Explore The Lab for Estate Mogul, LyftEmail, PRIME, and more.",
+    "Johnny Apple builds production agent systems, client portals, and AI infrastructure. Case studies, capabilities, and The Lab at Hotlist AI.",
   keywords: [
     // Core AI terms
     "AI",
@@ -117,23 +117,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hotlistai.com",
     siteName: "Hotlist AI",
-    title: "Hotlist AI | AI-Powered Digital Counterparts & Lead Generation Systems",
+    title: "Johnny Apple | Production AI Systems Builder — Hotlist AI",
     description:
-      "Build AI-powered digital counterparts, intelligent automation systems, and high-converting lead generation funnels. Software products and custom solutions starting at $2,500.",
+      "Hire a builder who ships agent loops, guardrails, client portals, and VPS-backed AI infrastructure — not demos.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hotlist AI - AI-Powered Digital Counterparts & Lead Generation Systems",
+        alt: "Johnny Apple — Production AI Systems Builder at Hotlist AI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hotlist AI | AI-Powered Digital Counterparts & Lead Generation Systems",
+    title: "Johnny Apple | Production AI Systems Builder — Hotlist AI",
     description:
-      "Build AI-powered digital counterparts, intelligent automation systems, and high-converting lead generation funnels. Software products and custom solutions starting at $2,500.",
+      "Hire a builder who ships agent loops, guardrails, client portals, and VPS-backed AI infrastructure — not demos.",
     images: ["/og-image.jpg"],
     creator: "@hotlistai",
     site: "@hotlistai",
